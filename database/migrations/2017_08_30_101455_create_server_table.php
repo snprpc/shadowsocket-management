@@ -13,12 +13,12 @@ class CreateServerTable extends Migration
      */
     public function up()
     {
-      
+
         Schema::create('server', function (Blueprint $table) {
             $table->increments('server_id');
             $table->ipAddress('server_ip');
             $table->string('server_port');
-            $table->boolean('isEnable')->default(1);
+            $table->boolean('isEnable')->default(0);
             $table->timestamps();
         });
     }

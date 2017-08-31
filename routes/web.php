@@ -14,3 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/sniper/ss-manager/login', 'ShadowSocket\AdminController@login');
+Route::get('/sniper/ss-manager/servers-manager/add-server', 'ShadowSocket\AdminController@add_server');
+Route::post('/sniper/ss-manager/servers-manager/add-server', 'ShadowSocket\AdminController@store_server');
